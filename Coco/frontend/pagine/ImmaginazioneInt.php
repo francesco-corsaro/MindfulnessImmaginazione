@@ -36,6 +36,7 @@ $risposte=array(
     "Vaga e offuscata",
     "Non hai assolutamente immagini, tu sai solo che stai pensando all ' abilità)");
 
+$controllo='required';
 ?>
 <html>
 	<head>

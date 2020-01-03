@@ -93,6 +93,7 @@ $ffmq=array(
 38=> 'Mi trovo a fare cose senza prestarvi attenzione.',
 39=> 'Sono critico/a con me stesso/a quando mi vengono delle idee irrazionali.'
 );
+$controllo='required';
 ?>
 <html><head>
 
@@ -100,7 +101,7 @@ $ffmq=array(
 <?php require 'backend/css/ffmq/Style.php'; ?>
 </head>
 <body>
-	<h1>FFMQ<?php echo ' '.$_SESSION['codice'].'<br>'.$stato1;?></h1>
+	<h1>FFMQ</h1>
 	<div class="col-9 consegna">
 		Risponda ai seguenti items, indicando per ognuno la risposta che meglio descrive la sua opinione o ciò che è più aderente al suo sentire.
 		

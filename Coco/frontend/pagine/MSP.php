@@ -83,6 +83,10 @@ $msp=array(
 "Riesco a rilassarmi");
 
 $risposte=array('Per nulla','Poco','Abbastanza','Molto');
+if ($_SESSION['codice']!=22) {
+    $controllo='required';
+}
+
 ?>
 <html>
 	<head>

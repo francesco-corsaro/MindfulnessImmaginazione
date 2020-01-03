@@ -11,9 +11,9 @@ if (!empty($_POST[ime])) {
     header("location: /Coco/frontend/pagine/ImmaginazioneInt.php");
 }
 $sezioni=array(
-    "Guardi te stesso dall'esterno eseguire il movimento <em>Immaginazione Visiva Esterna</em>",
-    "Ti vedi attraverso i tuoi occhi mentre esegui il movimento <em>Immaginazione visiva interna</em>",
-    "Senti, percepisci te stesso fare il movimento <em>Immaginazione Cinestesica</em>"
+    "<em>Immaginazione Visiva Esterna</em> Guardi te stesso dall'esterno eseguire il movimento ",
+    "<em>Immaginazione visiva interna</em> Ti vedi attraverso i tuoi occhi mentre esegui il movimento",
+    "<em>Immaginazione Cinestesica</em> Senti, percepisci te stesso fare il movimento"
 );
 
 $domande=array("Camminare",
@@ -35,7 +35,7 @@ $risposte=array(
     "Moderatamente chiara e vivida",
     "Vaga e offuscata",
     "Non hai assolutamente immagini, tu sai solo che stai pensando all ' abilità)");
-
+$controllo='required';
 ?>
 <html>
 	<head>

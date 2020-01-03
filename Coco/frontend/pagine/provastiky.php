@@ -45,6 +45,8 @@ $risposte=array(
     "Immagine perfettamente chiara e vivida come una normale visione"
     
 );
+
+$controllo="require";
 ?>
 <html>
 	<head>
@@ -53,7 +55,7 @@ $risposte=array(
 <?php require 'backend/css/VividezzaImmagine/Style.php';?>
 </head>
 	<body>
-		 <h1>Vividezza Dell'Immagine<?php echo ' '.$_SESSION['codice'].'<br>'.$stato1;?></h1>
+		 <h1>Vividezza Dell'Immagine</h1>
 		<div class="col-9 consegna">	
     		Per ciascuna delle situazioni seguenti viene proposto di chiudere gli occhi e provare ad
     		immaginare qualcosa. Valutare la vividezza della immagine che si riesce a creare nella mente
