@@ -1,5 +1,5 @@
 <?php
-session_start();/*
+session_start();/* VEDIAMO SE MODIFICA QUALCOSA
 //prendo la variabile Nome
 $_SESSION['Name']= $_POST['Name'];
 if (!preg_match("/^[a-zA-Z0-9 ]*$/",$_SESSION['Name'])) {
