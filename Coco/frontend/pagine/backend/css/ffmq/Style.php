@@ -53,6 +53,31 @@ h1{
   
   
   Con r classe modifico p nella pagina iniziale*/
+   .adesivo {
+	
+  	position: -webkit-sticky;
+  	position: sticky;
+	top: 0;
+	/*width:75%;
+	margin-left:12.5%; 
+	background-color: rgba(255,51,0);*/
+    
+}
+.attak{
+	
+	top:0;
+	background-color: rgba(255,51,0);
+  	border-radius:25px;
+  	padding:2%;
+    font-size:5vw;
+  	z-index: 3;
+  	 
+}@media only screen and (min-width: 760px) {
+ .attak {
+    font-size:2vw;
+    margin-left:12.5%;
+  }
+}
  .roi{
     margin:auto;
     bottom:2%;

@@ -58,15 +58,16 @@ $risposte=array(
 		</div>
 		
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"  >
-		
+		<div class="col-9 sezione">
+            <div class="adesivo attak col-12">
+              <?php echo  $sezioni[1]?>
+            </div>
 		<?php 
 		
 		    
 		    foreach ($domande as $num=>$domanda) {
 		        echo '<div class="row"><div class="col-10 tenda">
-                            <div class="col-12 color">
-                                '.$sezioni[1].': 
-                            </div>
+                           
                             <div class="col-12 color"
                                 <em><b class="joy">'.$domanda.'</b></em> 
                             </div>
@@ -87,6 +88,7 @@ $risposte=array(
 		    }
 	
 		?>
+		</div>
 			<div class="col-12">
               	<input type="submit" value="Invia"/>
              </div>
