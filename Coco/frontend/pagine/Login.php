@@ -30,7 +30,7 @@ if ($_POST['out']==1) {
     </head>
 
 	<body>
-		<h1>Ricerca MindFulness <?php echo ' '.$cod.' '.$stato1;?></h1>
+		<h1>Ricerca MindFulness <?php echo ' '.$_SESSION['codice'].' '.$stato1;?></h1>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"  >
 		<?php 
 		if ($_SESSION['denied']== 1) {
@@ -40,7 +40,7 @@ if ($_POST['out']==1) {
 		<div class="col-9 tenda">
     				
     					<div class="col-11">
-    						<div class="roi">
+    						<div class="roi"><?php echo $meccanico;?>
     							Inserisci Username e password
     						</div>
         				</div>

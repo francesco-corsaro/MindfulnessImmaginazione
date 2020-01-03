@@ -8,7 +8,7 @@ pwd_match($_POST[pwd]);
 
 require 'DataBase/ConnectDataBase.php';//serve a connettersi al database
 
-$sql = "SELECT email, pwd FROM Anagrafica";
+$sql = "SELECT email, pwd, codice FROM Anagrafica";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -17,8 +17,9 @@ if ($result->num_rows > 0) {
         if ($row['email'] == $email && password_verify($pasword, $row['pwd'])) {
             $_SESSION['bypass']='b1p4ss';
             $_SESSION['nickName']=$email;
-           
             $_SESSION['codice']= $row["codice"]  ;
+    /*  var_dump($row);
+        $meccanico="<br>Login effettuato<br>";*/
             header("location:/Coco/frontend/pagine/FFMQ.php");
         }else{
             $_SESSION['denied']=1;
