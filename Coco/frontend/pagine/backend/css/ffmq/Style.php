@@ -66,10 +66,10 @@ h1{
 .attak{
 	
 	top:0;
-	background-color: rgba(255,51,0);
+	background-color:#ffcc90; /*background-color:#FFFF4A rgba(255,51,0);*/
   	border-radius:25px;
-  	padding:2%;
-    font-size:5vw;
+  	padding:4%;
+    font-size:6vw;
   	z-index: 3;
   	 
 }@media only screen and (min-width: 760px) {

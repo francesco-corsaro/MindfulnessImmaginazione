@@ -32,7 +32,16 @@ if (!empty($_POST[nome])  && $emailStat==1 && $nomeStat==1 && $cognomeStat==1 &&
               }
             }
          </script>
-         
+         <script> <!-- con questo script si mostra la password -->
+            function myFunction1() {
+              var x = document.getElementById("myInput1");
+              if (x.type === "password") {
+                x.type = "text";
+              } else {
+                x.type = "password";
+              }
+            }
+         </script>
     </head>
 
 	<body>
@@ -65,10 +74,10 @@ if (!empty($_POST[nome])  && $emailStat==1 && $nomeStat==1 && $cognomeStat==1 &&
                 					<div class=" consegna">
                 					<input type="checkbox" onclick="myFunction()">Mostra Password
                 				</div>
-                					<input name="pwd2" type="password"  maxlength="8" id="myInput" placeholder="Conferma Password" required  >
+                					<input name="pwd2" type="password"  maxlength="8" id="myInput1" placeholder="Conferma Password" required  >
                 				</div>
                 				<div class=" consegna">
-                					<input type="checkbox" onclick="myFunction()">Mostra Password
+                					<input type="checkbox" onclick="myFunction1()">Mostra Password
                 				</div>
             			</div>
             			<div class="col-9 consegna">

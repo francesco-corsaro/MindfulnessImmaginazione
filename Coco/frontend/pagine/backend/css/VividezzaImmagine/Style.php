@@ -67,7 +67,7 @@ h1{
 .attak{
 	
 	top:0;
-	background-color: rgba(255,51,0);
+	background-color: rgba (255,204,153);/*rgba(255,51,0);*/
   	border-radius:25px;
   	padding:2%;
     font-size:5vw;
