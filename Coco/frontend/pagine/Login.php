@@ -30,7 +30,7 @@ if ($_POST['out']==1) {
     </head>
 
 	<body>
-		<h1>Ricerca MindFulness <?php echo ' '.$_SESSION['codice'].' '.$stato1;?></h1>
+		<h1>Ricerca MindFulness</h1>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"  >
 		<?php 
 		if ($_SESSION['denied']== 1) {

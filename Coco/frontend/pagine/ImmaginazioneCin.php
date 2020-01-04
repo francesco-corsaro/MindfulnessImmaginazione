@@ -1,19 +1,23 @@
 <?php
 session_start();
+//In questo modo nego l'accesso a chi non ha fatto il login
 if ($_SESSION['bypass']!=='b1p4ss') {
     $_SESSION['denied']=" 1 " ;
     header("location: /Coco/frontend/pagine/Login.php");
 }
+
+//Se l'array post è pieno carica le risposte nel database e manda alla pagina successiva
 $colonne=array('Q6i1','Q6i2','Q6i3','Q6i4','Q6i5','Q6i6','Q6i7','Q6i8','Q6i9','Q6i10','Q6i11','Q6i12');
 require 'backend/DataBase/UpLoadAnswersBot.php';
 if (!empty($_POST[ime])) {
     Upload_answersbot('ImViCi', $colonne, $_POST[ime], $_SESSION['codice']);
     header("location: /Coco/frontend/pagine/Login.php");
 }
+//creo gli array con i testi delle domande e delle risposte
 $sezioni=array(
-    "Guardi te stesso dall'esterno eseguire il movimento(Immaginazione Visiva Esterna)",
-    "Ti vedi attraverso i tuoi occhi mentre esegui il movimento (Immaginazione visiva interna)",
-    "Senti, percepisci te stesso fare il movimento (Immaginazione Cinestesica)"
+    "<em>Immaginazione Visiva Esterna</em> Guardi te stesso dall'esterno eseguire il movimento ",
+    "<em>Immaginazione visiva interna</em> Ti vedi attraverso i tuoi occhi mentre esegui il movimento",
+    "<em>Immaginazione Cinestesica</em> Senti, percepisci te stesso fare il movimento"
 );
 
 $domande=array("Camminare",

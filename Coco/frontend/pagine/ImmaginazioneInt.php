@@ -11,9 +11,9 @@ if (!empty($_POST[ime])) {
     header("location: /Coco/frontend/pagine/ImmaginazioneCin.php");
 }
 $sezioni=array(
-    "Guardi te stesso dall'esterno eseguire il movimento(Immaginazione Visiva Esterna)",
-    "Ti vedi attraverso i tuoi occhi mentre esegui il movimento (Immaginazione Visiva Interna)",
-    "Senti, percepisci te stesso fare il movimento (Immaginazione Cinestesica)"
+    "<em>Immaginazione Visiva Esterna</em> Guardi te stesso dall'esterno eseguire il movimento ",
+    "<em>Immaginazione visiva interna</em> Ti vedi attraverso i tuoi occhi mentre esegui il movimento",
+    "<em>Immaginazione Cinestesica</em> Senti, percepisci te stesso fare il movimento"
 );
 
 $domande=array("Camminare",
