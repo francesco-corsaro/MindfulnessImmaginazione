@@ -11,7 +11,7 @@ $colonne=array('Q6i1','Q6i2','Q6i3','Q6i4','Q6i5','Q6i6','Q6i7','Q6i8','Q6i9','Q
 require 'backend/DataBase/UpLoadAnswersBot.php';
 if (!empty($_POST[ime])) {
     Upload_answersbot('ImViCi', $colonne, $_POST[ime], $_SESSION['codice']);
-    header("location: /Coco/frontend/pagine/Login.php");
+    header("location: /Coco/frontend/pagine/Fine.php");
 }
 //creo gli array con i testi delle domande e delle risposte
 $sezioni=array(

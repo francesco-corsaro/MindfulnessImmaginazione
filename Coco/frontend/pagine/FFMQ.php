@@ -107,10 +107,7 @@ $controllo='required';
 		
 	</div>
 	<form action="/Coco/frontend/pagine/Login.php" method="post"  >
-	<div style="width:25%;float:right">
-		Disconetti<input  name="out" type ="radio" value="1">
-		<p><input type="submit" value="Invia"/></p>
-	</div>
+	
 	</form>
 	
 	<form action=" <?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"  >
