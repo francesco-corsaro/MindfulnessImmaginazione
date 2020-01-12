@@ -4,7 +4,7 @@ session_start();
 <html><head>
 
 <title>Mindfulness</title>
-<?php require 'backend/css/Fine/Style.php'; ?>
+<?php require 'frontend/css/Fine/Style.php'; ?>
 </head>
 <body>
 	<h1>Ricerca MindFulness</h1>

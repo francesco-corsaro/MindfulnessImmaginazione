@@ -1,5 +1,5 @@
 <?php session_start();
-require 'Coco/frontend/pagine/backend/SicurezzaForm/SicurezzaForm.php';
+require 'Coco/pagine/backend/SicurezzaForm/SicurezzaForm.php';
 if (!empty($_POST[nome])){
 test_input_email($_POST[email]);
 test_input_nome($_POST[nome]);
@@ -9,7 +9,7 @@ test_input_info( $_POST[eta], 18, 99);
 test_input_info($_POST[peso], 30, 150);
 test_input_info($_POST[altezza], 110, 250); ;
 }
-require 'Coco/frontend/pagine/backend/DataBase/InsertRegistrazione.php';
+require 'Coco/pagine/backend/DataBase/InsertRegistrazione.php';
 if (!empty($_POST[nome])  && $emailStat==1 && $nomeStat==1 && $cognomeStat==1 && $pwdStat && $infoStato!=0) {
  Inserisci_id(Anagrafica, $nome, $cognome, $_POST[eta], $_POST[genere], $_POST[peso], $_POST[altezza], $hash, $email);
  $acc_neg="<div>Accesso temporaneamente disabilitato</div>";
@@ -20,7 +20,7 @@ if (!empty($_POST[nome])  && $emailStat==1 && $nomeStat==1 && $cognomeStat==1 &&
     	<title>Registrazione </title>
     	
     	
-        <?php require 'Coco/frontend/pagine/backend/css/ffmq/Style.php'; ?>
+        <?php require 'Coco/pagine/frontend/css/ffmq/Style.php'; ?>
         
         <script> <!-- con questo script si mostra la password -->
             function myFunction() {

@@ -16,7 +16,7 @@ if ($_POST['out']==1) {
     <head>
     	<title>Login</title>
     	
-    	<?php require 'backend/css/ffmq/Style.php'; ?>
+    	<?php require 'frontend/css/ffmq/Style.php'; ?>
         <script> <!-- con questo script si mostra la password -->
             function myFunction() {
               var x = document.getElementById("myInput");

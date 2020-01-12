@@ -12,7 +12,7 @@ test_input_info($_POST[altezza], 110, 250); ;
 require 'backend/DataBase/InsertRegistrazione.php';
 if (!empty($_POST[nome])  && $emailStat==1 && $nomeStat==1 && $cognomeStat==1 && $pwdStat && $infoStato!=0) {
  Inserisci_id(Anagrafica, $nome, $cognome, $_POST[eta], $_POST[genere], $_POST[peso], $_POST[altezza], $hash, $email);
- header("location: /Coco/frontend/pagine/Login.php");
+ header("location: /Coco/pagine/Login.php");
  }
 ?>
 <html>
@@ -20,7 +20,7 @@ if (!empty($_POST[nome])  && $emailStat==1 && $nomeStat==1 && $cognomeStat==1 &&
     	<title>Registrazione </title>
     	
     	
-        <?php require 'backend/css/ffmq/Style.php'; ?>
+        <?php require 'frontend/css/ffmq/Style.php'; ?>
         
         <script> <!-- con questo script si mostra la password -->
             function myFunction() {

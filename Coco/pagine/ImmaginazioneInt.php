@@ -2,13 +2,13 @@
 session_start();
 if ($_SESSION['bypass']!=='b1p4ss') {
     $_SESSION['denied']=" 1 " ;
-    header("location: /Coco/frontend/pagine/Login.php");
+    header("location: /Coco/pagine/Login.php");
 }
 $colonne=array('Q5i1','Q5i2','Q5i3','Q5i4','Q5i5','Q5i6','Q5i7','Q5i8','Q5i9','Q5i10','Q5i11','Q5i12');
 require 'backend/DataBase/UpLoadAnswersBot.php';
 if (!empty($_POST[ime])) {
     Upload_answersbot('ImViIn', $colonne, $_POST[ime], $_SESSION['codice']);
-    header("location: /Coco/frontend/pagine/ImmaginazioneCin.php");
+    header("location: /Coco/pagine/ImmaginazioneCin.php");
 }
 $sezioni=array(
     "<em>Immaginazione Visiva Esterna</em> Guardi te stesso dall'esterno eseguire il movimento ",
@@ -43,7 +43,7 @@ $controllo='required';
 
 		<title>Immaginazione Visiva Interna</title>
 		
-		<?php require 'backend/css/ffmq/Style.php'; ?>
+		<?php require 'frontend/css/ffmq/Style.php'; ?>
 	</head>
 	<body>
 		
