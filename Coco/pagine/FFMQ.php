@@ -44,12 +44,12 @@ if (!empty($_POST[ffmq])) {
 }*/
 if ($_SESSION['bypass']!=='b1p4ss') {
         $_SESSION['denied']=" 1 " ;
-        header("location: /Coco/frontend/pagine/Login.php");
+        header("location: /Coco/pagine/Login.php");
 }
 require 'backend/DataBase/UpLoadAnswersBot.php';
 if (!empty($_POST[ffmq])) {
     Upload_answersbot('ffmq', $colonneFFMQ, $_POST[ffmq], $_SESSION['codice']);
-    header("location: /Coco/frontend/pagine/provastiky.php");
+    header("location: /Coco/pagine/provastiky.php");
 }
 
 $ffmq=array(
@@ -98,7 +98,7 @@ $controllo='required';
 <html><head>
 
 <title>FFMQ</title>
-<?php require 'backend/css/ffmq/Style.php'; ?>
+<?php require 'frontend/css/ffmq/Style.php'; ?>
 </head>
 <body>
 	<h1>FFMQ</h1>
@@ -106,9 +106,6 @@ $controllo='required';
 		Risponda ai seguenti items, indicando per ognuno la risposta che meglio descrive la sua opinione o ciò che è più aderente al suo sentire.
 		
 	</div>
-	<form action="/Coco/frontend/pagine/Login.php" method="post"  >
-	
-	</form>
 	
 	<form action=" <?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"  >
 		
