@@ -67,18 +67,36 @@ if (!empty($_POST[nome])  && $emailStat==1 && $nomeStat==1 && $cognomeStat==1 &&
                 		<div class="col-8">
                 		<?php echo $pwdErr;?>
                 				<div class="col-7">
-                				
                 					<input name="pwd1" type="password"  maxlength="8" id="myInput" placeholder="Inserire Password" required  >
                 				</div>
-                				<div class="col-7">
-                					<div class=" consegna">
+                				<div class=" consegna">
                 					<input type="checkbox" onclick="myFunction()">Mostra Password
                 				</div>
-                					<input name="pwd2" type="password"  maxlength="8" id="myInput1" placeholder="Conferma Password" required  >
+                				<div class="col-7">
+                					<input name="pwd2" type="password"  oninput="compare_pwd()" maxlength="8" id="myInput1" placeholder="Conferma Password" required  >
                 				</div>
                 				<div class=" consegna">
                 					<input type="checkbox" onclick="myFunction1()">Mostra Password
                 				</div>
+                				<!-- Questo script manda un messaggio se le password non coincidono -->
+                				<p id="mex_err"><p>
+                				<script>
+                        			function compare_pwd(){
+                        				var pwd=document.getElementById("myInput").value;
+                        				var	pwd1=document.getElementById("myInput1").value;
+                        				if (pwd === pwd1){
+                        					document.getElementById("mex_err").innerHTML=
+                            				"Passwrord: ok!";
+                        					document.getElementById("mex_err").style.color=
+                            				'green';
+                        				} else {
+                        					document.getElementById("mex_err").innerHTML=
+                                				"Le password non coincidono";
+                        					document.getElementById("mex_err").style.color=
+                                				'red';
+                            				}
+                        			}
+                                 </script>
             			</div>
             			<div class="col-9 consegna">
             				Genere:	<label class="contenitore" id="gen">
