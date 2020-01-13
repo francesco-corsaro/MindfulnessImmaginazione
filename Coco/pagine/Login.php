@@ -40,7 +40,7 @@ if ($_POST['out']==1) {
 		<div class="col-9 tenda">
     				
     					<div class="col-11">
-    						<div class="roi"><?php echo $meccanico;?>
+    						<div class="roi"><?php echo $meccanico;?> <?php if ($_SESSION['cambiopwd']==1) {echo '<div>Password modificata</div>';} ?>
     							Inserisci Username e password
     						</div>
         				</div>

@@ -14,7 +14,8 @@ require 'backend/DataBase/CambiaPwd.php';
     if ($emailStat==1 && $pwdStat && $infoStato!=0){
  
     cambia_pwd(Anagrafica,pwd,$hash,email,$email,peso,$_POST[peso],altezza,$_POST[altezza]);
-//  header("location: /Coco/pagine/Login.php");
+    $_SESSION['cambiopwd']=1;
+    header("location: /Coco/pagine/Login.php");
  }
 }
 ?>
