@@ -14,7 +14,7 @@ function test_security($email,$nome,$cognome,$pwd, $pwd2,$eta,$genere,$peso,$alt
         test_input_info($altezza, 120, 240);
         if($emailStat==1 && $nomeStat==1 && $pwdStat==1 && $infoStat==1 ){
             Inserisci_id(Anagrafica, $nome, $cognome, $eta, $genere, $peso, $altezza, $hash, $email);
-            header("location: /Coco/frontend/pagine/Login.php");
+            header("location: /Coco/pagine/Login.php");
         }
      }
 }

@@ -2,14 +2,14 @@
 session_start();
 if ($_SESSION['bypass']!=='b1p4ss') {
     $_SESSION['denied']=" 1 " ;
-    header("location: /Coco/frontend/pagine/Login.php");
+    header("location: /Coco/pagine/Login.php");
 }
 $colonneVivi=array('Q2i1','Q2i2','Q2i3','Q2i4','Q2i5','Q2i6','Q2i7','Q2i8','Q2i9','Q2i10','Q2i11','Q2i12','Q2i13','Q2i14','Q2i15','Q2i16');
 //inserisco le risposte nel test
 require 'backend/DataBase/UpLoadAnswersBot.php';
 if (!empty($_POST[vividezza])) {
     Upload_answersbot('Vividezza', $colonneVivi, $_POST[vividezza], $_SESSION['codice']);
-    header("location: /Coco/frontend/pagine/MSP.php");
+    header("location: /Coco/pagine/MSP.php");
 }
 
 $stiky=array( 
@@ -52,7 +52,7 @@ $controllo="require";
 	<head>
 <title>VividezzaDellImmagine</title>
 
-<?php require 'backend/css/VividezzaImmagine/Style.php';?>
+<?php require 'frontend/css/VividezzaImmagine/Style.php';?>
 </head>
 	<body>
 		 <h1>Vividezza Dell'Immagine</h1>

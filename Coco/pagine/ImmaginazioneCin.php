@@ -3,7 +3,7 @@ session_start();
 //In questo modo nego l'accesso a chi non ha fatto il login
 if ($_SESSION['bypass']!=='b1p4ss') {
     $_SESSION['denied']=" 1 " ;
-    header("location: /Coco/frontend/pagine/Login.php");
+    header("location: /Coco/pagine/Login.php");
 }
 
 //Se l'array post è pieno carica le risposte nel database e manda alla pagina successiva
@@ -11,7 +11,7 @@ $colonne=array('Q6i1','Q6i2','Q6i3','Q6i4','Q6i5','Q6i6','Q6i7','Q6i8','Q6i9','Q
 require 'backend/DataBase/UpLoadAnswersBot.php';
 if (!empty($_POST[ime])) {
     Upload_answersbot('ImViCi', $colonne, $_POST[ime], $_SESSION['codice']);
-    header("location: /Coco/frontend/pagine/Fine.php");
+    header("location: /Coco/pagine/Fine.php");
 }
 //creo gli array con i testi delle domande e delle risposte
 $sezioni=array(
@@ -46,7 +46,7 @@ $controllo='required';
 
 		<title>Immaginazione Cinestesica</title>
 		
-		<?php require 'backend/css/ffmq/Style.php'; ?>
+		<?php require 'frontend/css/ffmq/Style.php'; ?>
 	</head>
 	<body>
 		

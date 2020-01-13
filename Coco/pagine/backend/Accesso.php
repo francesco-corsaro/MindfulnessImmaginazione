@@ -20,7 +20,7 @@ if ($result->num_rows > 0) {
             $_SESSION['codice']= $row["codice"]  ;
     /*  var_dump($row);
         $meccanico="<br>Login effettuato<br>";*/
-            header("location:/Coco/frontend/pagine/FFMQ.php");
+            header("location:/Coco/pagine/FFMQ.php");
         }else{
             $_SESSION['denied']=1;
         

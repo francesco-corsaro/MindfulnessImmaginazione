@@ -2,7 +2,7 @@
 session_start();
 if ($_SESSION['bypass']!=='b1p4ss') {
         $_SESSION['denied']=" 1 " ;
-        header("location: /Coco/frontend/pagine/Login.php");
+        header("location: /Coco/pagine/Login.php");
 }
         /*
 //Creo dei permessi per bypassare il reuired
@@ -29,7 +29,7 @@ $colonneMSP=array('Q3i1','Q3i2','Q3i3','Q3i4','Q3i5','Q3i6','Q3i7','Q3i8','Q3i9'
 require 'backend/DataBase/UpLoadAnswersBot.php';
 if (!empty($_POST[msp])) {
     Upload_answersbot('msp', $colonneMSP, $_POST[msp], $_SESSION['codice']);
-    header("location: /Coco/frontend/pagine/Immaginazione.php");
+    header("location: /Coco/pagine/Immaginazione.php");
 }
 $msp=array(
     "Sento di stare in continua tensione",
@@ -93,7 +93,7 @@ if ($_SESSION['codice']!=22) {
 
 		<title>MSP</title>
 		
-		<?php require 'backend/css/ffmq/Style.php'; ?>
+		<?php require 'frontend/css/ffmq/Style.php'; ?>
 	</head>
 	<body>
 		
