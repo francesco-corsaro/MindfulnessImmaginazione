@@ -32,7 +32,7 @@ if ($_POST['out']==1) {
 	<body>
 		<h1>Ricerca MindFulness<?php echo $stato ;?></h1>
 		
-		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"  >
+		<form name="myForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"  >
 		<?php 
 		if ($_SESSION['denied']== 1) {
 		    echo "<div>Utentente non trovato</div>";
@@ -62,7 +62,8 @@ if ($_POST['out']==1) {
                 				<a href="/Coco/pagine/NewPwd.php" >Hai dimenticato la password? Clicca qui</a>
                 			</div>
 						<div class="col-12">
-                    		<input type="submit" value="Accedi"/>
+                    		<input type="submit" id="myBtn" value="Accedi" disabled/>
+                    		<script src="/Coco/pagine/frontend/css/DisabilitaSubmit.js"> </script>
                     	</div>
                     	<div class="col-12 consegna">
                     		Oppure <b><a href="/Coco/pagine/Registrazione.php">Registrati</a></b>
