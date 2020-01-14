@@ -42,6 +42,26 @@ h1{
     font-size:2vw;
   }
 }
+/* Impostazioni Link*/
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color:grey;
+}
+
+a:hover {
+  text-decoration: underline;
+  color:blue;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
 .joy{text-align:center;}
 .jay{
     float:right;
@@ -360,7 +380,7 @@ input[type=text]:active {
 
 /*submit*/
 input[type=submit] {
-  float:right;
+  float:left;
   display: inline-block;
   border-radius: 20px;
   background-color:#7CB9E8;

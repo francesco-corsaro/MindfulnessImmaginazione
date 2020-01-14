@@ -27,25 +27,18 @@ require 'backend/DataBase/CambiaPwd.php';
         <?php require 'frontend/css/ffmq/Style.php'; ?>
         
         <script> <!-- con questo script si mostra la password -->
-            function myFunction() {
-              var x = document.getElementById("myInput");
-              if (x.type === "password") {
-                x.type = "text";
-              } else {
-                x.type = "password";
-              }
-            }
-         </script>
-         <script> <!-- con questo script si mostra la password -->
             function myFunction1() {
-              var x = document.getElementById("myInput1");
+              var x = document.getElementById("myInput");
+              var y = document.getElementById("myInput1");
               if (x.type === "password") {
                 x.type = "text";
+                y.type = "text";
               } else {
                 x.type = "password";
               }
             }
          </script>
+        
          
     </head>
 
@@ -81,9 +74,7 @@ require 'backend/DataBase/CambiaPwd.php';
                 				
                 					<input name="pwd1" type="password"  maxlength="8" id="myInput" placeholder="Inserire Password" required  >
                 				</div>
-                				<div class=" consegna">
-                					<input type="checkbox" onclick="myFunction()">Mostra Password
-                				</div>
+                				
                 			</div>
                 				
                 			<div class="col-12">
