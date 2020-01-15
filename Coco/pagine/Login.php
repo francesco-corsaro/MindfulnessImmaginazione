@@ -48,7 +48,7 @@ if ($_POST['out']==1) {
         				
                     		<div class="col-6">	
                     			<?php echo $emailErr;?>
-                    			<input name="email" type="TEXT" placeholder="Username" required>
+                    			<input name="email" type="TEXT" placeholder="Username" oninput=validateForm() required>
                     		</div>
                     		<div class="col-12">
                         		<div class="col-6">
@@ -63,7 +63,18 @@ if ($_POST['out']==1) {
                 			</div>
 						<div class="col-12">
                     		<input type="submit" id="myBtn" value="Accedi" disabled/>
-                    		<script src="/Coco/pagine/frontend/css/DisabilitaSubmit.js"> </script>
+                    		<script src="/frontend/css/DisabilitaSubmit.js">
+                    	/*	function validateForm() {
+                    			  var x = document.forms["myForm"]["email"].value; //da notare come vengono chiamati i valori del form
+                    		      var y = document.forms["myForm"]["pwd"].value; //da notare come vengono chiamati i valori del form
+                    		  if (x == "" && y == "" ) {
+                    		    document.getElementById("myBtn").disabled=true; //il bottone deve essere impostato su disabilita
+
+                    		  }else{
+                    		  document.getElementById("myBtn").disabled=false;
+                    		  }
+                    		}*/
+                    		</script>
                     	</div>
                     	<div class="col-12 consegna">
                     		Oppure <b><a href="/Coco/pagine/Registrazione.php">Registrati</a></b>

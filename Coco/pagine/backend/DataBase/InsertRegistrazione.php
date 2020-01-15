@@ -36,7 +36,8 @@ function Insert_cod_date($tabel,$codice, $data) {
     }
     $conn->close();
 }
-function insert_3val1($tabel,$colonna1,$val1,$colonna2,$val2,$colonna3,$val3) {
+/*
+function insert_3val12($tabel,$colonna1,$val1,$colonna2,$val2,$colonna3,$val3) {
     
     
     require 'ConnectDataBase.php';

@@ -26,7 +26,7 @@ function insert_3val($tabel,$colonna1,$val1,$colonna2,$val2,$colonna3,$val3) {
 
 require 'DataBase/ConnectDataBase.php';//serve a connettersi al database
 
-$sql = "SELECT email, pwd, codice FROM Anagrafica";
+$sql = "SELECT email, pwd, codice, nome, cognome FROM Anagrafica";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
             $cogn=$row["cognome"];
             $nom=$row["nome"];
             $conn->close();
-            insert_3val(Presenze,nome,$nom,cognome,$cognome,codice,$_SESSION['codice']);
+            insert_3val(Presenze,nome,$nom,cognome,$cogn,codice,$_SESSION['codice']);
     /*  var_dump($row);
         $meccanico="<br>Login effettuato<br>";*/
             header("location:/Coco/pagine/FFMQ.php");
