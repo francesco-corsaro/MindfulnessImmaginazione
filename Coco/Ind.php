@@ -1,3 +1,3 @@
 <?php
-header("location: /Coco/frontend/pagine/Registrazione.php");
+header("location: /Coco/pagine/Login.php");
 ?>

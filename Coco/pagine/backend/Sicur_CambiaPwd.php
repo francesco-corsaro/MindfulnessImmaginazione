@@ -14,7 +14,7 @@
    
         }else {
             global $mexpwd;
-            $mexpwd="<div>Utente non trovato</div>";
+            $mexpwd="<div>Dati non inseriti correttamente</div>";
         }
         
     }

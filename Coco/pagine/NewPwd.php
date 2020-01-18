@@ -27,25 +27,19 @@ require 'backend/DataBase/CambiaPwd.php';
         <?php require 'frontend/css/ffmq/Style.php'; ?>
         
         <script> <!-- con questo script si mostra la password -->
-            function myFunction() {
-              var x = document.getElementById("myInput");
-              if (x.type === "password") {
-                x.type = "text";
-              } else {
-                x.type = "password";
-              }
-            }
-         </script>
-         <script> <!-- con questo script si mostra la password -->
             function myFunction1() {
-              var x = document.getElementById("myInput1");
+              var x = document.getElementById("myInput");
+              var y = document.getElementById("myInput1");
               if (x.type === "password") {
                 x.type = "text";
+                y.type = "text";
               } else {
                 x.type = "password";
               }
             }
          </script>
+        
+         
     </head>
 
 	<body>
@@ -75,20 +69,40 @@ require 'backend/DataBase/CambiaPwd.php';
                     		<input name="altezza" type="TEXT"   placeholder="Altezza in cm" maxlength="3" required >
                     	</div>
                     	<?php echo $pwdErr;?>
+                			<div class="col-12">	
                 				<div class="col-7">
                 				
                 					<input name="pwd1" type="password"  maxlength="8" id="myInput" placeholder="Inserire Password" required  >
                 				</div>
+                				
+                			</div>
+                				
+                			<div class="col-12">
                 				<div class="col-7">
-                					<div class=" consegna">
-                					<input type="checkbox" onclick="myFunction()">Mostra Password
-                				</div>
-                					<input name="pwd2" type="password"  maxlength="8" id="myInput1" placeholder="Conferma Password" required  >
+                					<input name="pwd2" type="password"  oninput="compare_pwd()" maxlength="8" id="myInput1" placeholder="Conferma Password" required  >
                 				</div>
                 				<div class=" consegna">
                 					<input type="checkbox" onclick="myFunction1()">Mostra Password
                 				</div>
-            			</div>
+                				<p id="mex_err"><p>
+                				<script>
+                        			function compare_pwd(){
+                        				var pwd=document.getElementById("myInput").value;
+                        				var	pwd1=document.getElementById("myInput1").value;
+                        				if (pwd === pwd1){
+                        					document.getElementById("mex_err").innerHTML=
+                            				"Passwrord: ok!";
+                        					document.getElementById("mex_err").style.color=
+                            				'green';
+                        				} else {
+                        					document.getElementById("mex_err").innerHTML=
+                                				"Le password non coincidono";
+                        					document.getElementById("mex_err").style.color=
+                                				'red';
+                            				}
+                        			}
+                                 </script>
+            				</div>
                     	<div class="col-12">
                     		<input type="submit" value="Invia"/>
                     	</div>

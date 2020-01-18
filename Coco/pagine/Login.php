@@ -16,7 +16,7 @@ if ($_POST['out']==1) {
     <head>
     	<title>Login</title>
     	
-    	<?php require 'frontend/css/ffmq/Style.php'; ?>
+    	<?php require 'frontend/css/login/Style.php'; ?>
         <script> <!-- con questo script si mostra la password -->
             function myFunction() {
               var x = document.getElementById("myInput");
@@ -30,15 +30,16 @@ if ($_POST['out']==1) {
     </head>
 
 	<body>
-		<h1>Ricerca MindFulness</h1>
-		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"  >
+		<h1>Ricerca MindFulness<?php echo $stato ;?></h1>
+		
+		<form name="myForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"  >
 		<?php 
 		if ($_SESSION['denied']== 1) {
 		    echo "<div>Utentente non trovato</div>";
 		    $_SESSION['denied']== 0;
 		}?>
 		<div class="col-9 tenda">
-    				
+    				<div class="titolo">Login</div>
     					<div class="col-11">
     						<div class="roi"><?php echo $meccanico;?> <?php if ($_SESSION['cambiopwd']==1) {echo '<div>Password modificata</div>';} ?>
     							Inserisci Username e password
@@ -47,18 +48,36 @@ if ($_POST['out']==1) {
         				
                     		<div class="col-6">	
                     			<?php echo $emailErr;?>
-                    			<input name="email" type="TEXT" placeholder="Username" required>
+                    			<input name="email" type="TEXT" placeholder="Username" oninput=validateForm() required>
                     		</div>
                     		<div class="col-12">
-                        		<div class="col-7">
+                        		<div class="col-6">
                         			<input name="pwd" type="password"  maxlength="8" id="myInput" placeholder="Password" required  >
                         		</div>
                         		<div class=" consegna">
                         			<input type="checkbox" onclick="myFunction()">Mostra Password
                         		</div>
                 			</div>
+                			<div class="col-12 collegamento">
+                				<a href="/Coco/pagine/NewPwd.php" >Hai dimenticato la password? Clicca qui</a>
+                			</div>
 						<div class="col-12">
-                    		<input type="submit" value="Invia"/>
+                    		<input type="submit" id="myBtn" value="Accedi" disabled/>
+                    		<script src="/frontend/css/DisabilitaSubmit.js">
+                    	/*	function validateForm() {
+                    			  var x = document.forms["myForm"]["email"].value; //da notare come vengono chiamati i valori del form
+                    		      var y = document.forms["myForm"]["pwd"].value; //da notare come vengono chiamati i valori del form
+                    		  if (x == "" && y == "" ) {
+                    		    document.getElementById("myBtn").disabled=true; //il bottone deve essere impostato su disabilita
+
+                    		  }else{
+                    		  document.getElementById("myBtn").disabled=false;
+                    		  }
+                    		}*/
+                    		</script>
+                    	</div>
+                    	<div class="col-12 consegna">
+                    		Oppure <b><a href="/Coco/pagine/Registrazione.php">Registrati</a></b>
                     	</div>
 		</div>
 		</form>
