@@ -1,19 +1,20 @@
 <?php
-/*if (!preg_match("/^[a-zA-Z0-9 ]*$/",$_POST['nome'])) {
-    $errTesto= '<div class="col-12 errore">Sono consentiti solo lettere e numeri</div>';
-    
-}*/
+class Sicurezza {
+ public $data;    
 
+ function __construct($data){
+     $this->data=$data;
+ }
 
-
-function test_input($data) {
-    $data= trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
+function test_input() {
+    trim( $this->data);
+    stripslashes( $this->data);
+    htmlspecialchars($this->data);
     //global  $dato;
   //  $dato=$data;
-    //return $dato; 
+    return $this->data; 
     
+}
 }
 function test_input_email($data) {
     $data = htmlspecialchars($data);
